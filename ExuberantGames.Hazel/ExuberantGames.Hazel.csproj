@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+      <TargetFrameworks>netstandard2.0;net5.0</TargetFrameworks>
+      <AssemblyTitle>ExuberantGames.Hazel</AssemblyTitle>
+      <Company>Exuberant Games</Company>
+      <Product>ExuberantGames.Hazel</Product>
+      <Copyright>Copyright © 2021</Copyright>
+      <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+      <DebugType>portable</DebugType>
+      <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+      <DebugSymbols>true</DebugSymbols>
+      <LangVersion>9</LangVersion>
+      <UnityTarget>false</UnityTarget>
+      <UnityTarget Condition="$(TargetFramework) == 'netstandard2.0'">true</UnityTarget>
+      <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" $(UnityTarget) ">
+    <OutputPath>..\..\Client\Packages\com.exuberantgames.biohazard-shared\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+</Project>

@@ -83,7 +83,7 @@
     <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Hazel\Hazel.csproj">
+    <ProjectReference Include="..\ExuberantGames.Hazel\ExuberantGames.Hazel.csproj">
       <Project>{02cfbd30-d77d-400f-94b2-700f60efdd7f}</Project>
       <Name>Hazel</Name>
     </ProjectReference>

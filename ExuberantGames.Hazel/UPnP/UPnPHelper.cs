@@ -281,7 +281,7 @@ namespace Hazel.UPnP
                 "</u:DeletePortMapping>", "DeletePortMapping");
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // m_peer.LogWarning("UPnP delete forwarding rule failed: " + ex.Message);
                 return false;
@@ -304,7 +304,7 @@ namespace Hazel.UPnP
                 string IP = xdoc.SelectSingleNode("//NewExternalIPAddress/text()", nsMgr).Value;
                 return IPAddress.Parse(IP);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // m_peer.LogWarning("Failed to get external IP: " + ex.Message);
                 return null;
